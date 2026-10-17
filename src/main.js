@@ -1,14 +1,14 @@
-import { getContactos } from "./api-service";
+import { getClientes } from "./api-service";
 
 let app = document.getElementById("app");
 
-getContactos().then((contactos) => {
+getClientes().then((clientes) => {
   let lista = "";
-  contactos.forEach((contacto) => {
-    lista += `<li>${contacto.nombre} ${contacto.email}</li>`;
+  clientes.forEach((cliente) => {
+    lista += `<li>${cliente.nombre} ${cliente.email}</li>`;
   });
   app.innerHTML = `
-    <h1>Contactos</h1>
+    <h1>Clientes</h1>
     <ul>
         ${lista}
     </ul>
